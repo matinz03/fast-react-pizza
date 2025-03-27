@@ -168,5 +168,4 @@ export async function action({ request }) {
     store.dispatch(clearCart())
     return redirect(`/order/${newOrder.id}`)
 }
-// order = SCX6YS
 export default CreateOrder
