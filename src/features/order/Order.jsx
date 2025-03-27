@@ -9,6 +9,7 @@ import {
 } from '../../utils/helpers'
 import { useFetcher, useLoaderData } from 'react-router-dom'
 import { useEffect } from 'react'
+import UpdateOrder from './UpdateOrder'
 
 function Order() {
     const order = useLoaderData()
@@ -85,6 +86,7 @@ function Order() {
                     {formatCurrency(orderPrice + priorityPrice)}
                 </p>
             </div>
+            {!priority && <UpdateOrder order={order} />}
         </div>
     )
 }
